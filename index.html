@@ -60,7 +60,7 @@
         #output {
             position:absolute;
             width: 100%;
-            top:456px;
+            top:448px;
             bottom:0;
             left:0;
             bottom:0;
@@ -88,6 +88,31 @@
           right: 0;
         }
 
+
+        .myul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .myul > li {
+            float: left;
+        }
+
+        .myelem {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 8px 8px;
+            text-decoration: none;
+        }
+
+        .mynav {
+            font-size: 95%;
+            padding: 4px;
+        }
+
     </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -99,34 +124,29 @@
 </header>
 
 <div id="wrapper2">
-    <div class="mynavbar navbar navbar-expand-md navbar-dark bg-dark">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">CryptoMiniSat</a>
+    <div class="mynav bg-dark">
+        <ul class="myul">
+            <li>
+            <a class="nav-link myelem" href="#">CryptoMiniSat</a>
+            </li><li>
+            <a class="nav-link myelem" href="https://www.msoos.org/">Blog</a>
+            <!--</li><li>
+            <a class="nav-link myelem" href="https://github.com/msoos/cryptominisat">GitHub</a>-->
+            </li><li>
+            <button type="button" id="save" class="btn btn-primary btn-md myelem" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Copied to clipboard" aria-label="Copy to Clipboard" disabled>
+                <i class="fas fa-paste" aria-hidden="true"></i>
+            </button>
             </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.msoos.org/">Blog</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/msoos/cryptominisat">GitHub</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <button type="button" id="save" class="btn btn-primary btn-md" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Copied to clipboard" aria-label="Copy to Clipboard" disabled>
-                    <i class="fas fa-paste" aria-hidden="true"></i>
+
+            <li>
+            <div class="myelem" id="result">Loading</div>
+            </li><li>
+                <span style="display:inline-block; width: 10px;"></span>
+                <button type="button" id="runbutton" class="btn btn-primary myelem" disabled>
+                    <i id="playbut" class="fas fa-play" aria-hidden="true"></i>
                 </button>
             </li>
         </ul>
-        <div id="result">Loading</div>
-        <span style="display:inline-block; width: 10px;"></span>
-        <button type="button" id="runbutton" class="btn btn-primary" disabled>
-            <i id="playbut" class="fas fa-play" aria-hidden="true"></i>
-        </button>
     </div>
 
     <div id="wrapper">
