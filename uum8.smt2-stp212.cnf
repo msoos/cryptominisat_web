@@ -1,4 +1,4 @@
-c This a demo of CryptoMiniSat, NOT the full solver
+c CryptoMiniSat demo, NOT the full solver
 c This is uum8.smt2-stp212.cnf from SAT Competition 2016
 c It should solve in about 30 seconds
 c You can edit and click the "copy/paste" button and send the link around
