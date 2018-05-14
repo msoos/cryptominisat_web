@@ -1659,7 +1659,7 @@ var ASM_CONSTS = [];
 
 STATIC_BASE = GLOBAL_BASE;
 
-STATICTOP = STATIC_BASE + 248480;
+STATICTOP = STATIC_BASE + 248448;
 /* global initializers */  __ATINIT__.push({ func: function() { __GLOBAL__I_000101() } }, { func: function() { __GLOBAL__sub_I_iostream_cpp() } });
 
 
@@ -1668,7 +1668,7 @@ STATICTOP = STATIC_BASE + 248480;
 
 
 
-var STATIC_BUMP = 248480;
+var STATIC_BUMP = 248448;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 
@@ -11902,7 +11902,7 @@ var __ZNSt3__215__num_get_floatIeEET_PKcS3_Rj = Module["__ZNSt3__215__num_get_fl
 var __ZNSt3__215__num_get_floatIfEET_PKcS3_Rj = Module["__ZNSt3__215__num_get_floatIfEET_PKcS3_Rj"] = function() {  return Module["asm"]["__ZNSt3__215__num_get_floatIfEET_PKcS3_Rj"].apply(null, arguments) };
 var __ZNSt3__215__refstring_imp12_GLOBAL__N_113data_from_repEPNS1_9_Rep_baseE = Module["__ZNSt3__215__refstring_imp12_GLOBAL__N_113data_from_repEPNS1_9_Rep_baseE"] = function() {  return Module["asm"]["__ZNSt3__215__refstring_imp12_GLOBAL__N_113data_from_repEPNS1_9_Rep_baseE"].apply(null, arguments) };
 var __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc = Module["__ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc"] = function() {  return Module["asm"]["__ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc"].apply(null, arguments) };
-var __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_930 = Module["__ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_930"] = function() {  return Module["asm"]["__ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_930"].apply(null, arguments) };
+var __ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_932 = Module["__ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_932"] = function() {  return Module["asm"]["__ZNSt3__215__refstring_imp12_GLOBAL__N_113rep_from_dataEPKc_932"].apply(null, arguments) };
 var __ZNSt3__215__thread_struct25notify_all_at_thread_exitEPNS_18condition_variableEPNS_5mutexE = Module["__ZNSt3__215__thread_struct25notify_all_at_thread_exitEPNS_18condition_variableEPNS_5mutexE"] = function() {  return Module["asm"]["__ZNSt3__215__thread_struct25notify_all_at_thread_exitEPNS_18condition_variableEPNS_5mutexE"].apply(null, arguments) };
 var __ZNSt3__215__thread_struct27__make_ready_at_thread_exitEPNS_17__assoc_sub_stateE = Module["__ZNSt3__215__thread_struct27__make_ready_at_thread_exitEPNS_17__assoc_sub_stateE"] = function() {  return Module["asm"]["__ZNSt3__215__thread_struct27__make_ready_at_thread_exitEPNS_17__assoc_sub_stateE"].apply(null, arguments) };
 var __ZNSt3__215__thread_structC2Ev = Module["__ZNSt3__215__thread_structC2Ev"] = function() {  return Module["asm"]["__ZNSt3__215__thread_structC2Ev"].apply(null, arguments) };
