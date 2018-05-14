@@ -100,27 +100,37 @@
 
 <div id="wrapper2">
     <div class="mynavbar navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="mynavbar" href="#">CryptoMiniSat</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">CryptoMiniSat</a>
+            </li>
+        </ul>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <!--<button class="navbar-toggler pull-left" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon pull-left"></span>
+        </button>-->
+
+        <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.msoos.org/">Blog</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/msoos/cryptominisat">GitHub</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <button type="button" id="save" class="btn btn-primary btn-md" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Copied to clipboard" aria-label="Copy to Clipboard" disabled>
                         <i class="fas fa-paste" aria-hidden="true"></i>
                     </button>
                 </li>
             </ul>
-        </div>
+        <!--</div>-->
         <div id="result">Loading</div>
+        <span style="display:inline-block; width: 10px;"></span>
         <button type="button" id="runbutton" class="btn btn-primary" disabled>
             <i id="playbut" class="fas fa-play" aria-hidden="true"></i>
         </button>
