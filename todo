@@ -1,0 +1,9 @@
+cd ~/development/emscripten
+source ./emsdk_env.sh
+
+cd ~/development/sat_solvers/cryptominisat/build
+mkdir emscripten
+cd empscripten
+ln -s ../emscripten/solver.html .
+python -m http.server 8000 --bind 127.0.0.1
+
