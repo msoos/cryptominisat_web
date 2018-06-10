@@ -10,112 +10,134 @@
     html, body {
         height: 100%;
         width: 100%;
+        padding:0;
+        margin:0;
+    }
+
+    #outer {
         padding: 0;
-        color: white;
-        margin: 0;
+        margin:0;
+        display: table;
+        width: 100%;
+        height: 100%;
+        border:0;
+    }
+
+    #inner {
+        padding: 0;
+        margin:0;
+        display: table-row;
+    }
+
+    #wrapper {
+        padding: 0;
+        margin:0;
+        display: table;
+        width: 100%;
+        height: 100%;
         background: black;
-        }
+    }
 
-        #wrapper {
-            display: table;
-            width: 100%;
-            height: 100%;
-            background: black;
-        }
-        #wrapper > div {
-            display: table-row;
-        }
-        #wrapper > div > div {
-            display: table-cell;
-        }
+    .minirow {
+        padding: 0;
+        margin:0;
+        border:0;
+        display: table-row;
+        height: 15px;
+        background:green;
+    }
 
-        #result {
-             color: white;
-        }
+    .row {
+        padding: 0;
+        margin:0;
+        display: table-row;
+        height: 50%;
+    }
 
-        #wrapper > div > #topleft,
-        #wrapper > div > #bottomleft {
-            /*width: 300px;*/
-            margin: 0;
-        }
-        #wrapper > div > #topleft,
-        #wrapper > div > #bottomleft {
-            /*background: #092A7C;*/
-        }
+    .row div {
+        padding: 0;
+        margin:0;
+        height: 100%;
+        width: 100%;
+    }
 
-        #bottom {
-            background: black;
-            height: 100%;
-        }
+    #outputdiv {
+        padding: 0;
+        margin:0;
+        width:100%;
+    }
 
-        #wrapper > div > #bottomleft {
-            background: black;
-            color: white;
-            padding: 0px;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 10px;
-            white-space: pre-line
-        }
+    #output {
+        padding:0;
+        margin:0;
+        border:2;
+        font-size: 10px;
 
-        #output {
-            position:absolute;
-            width: 100%;
-            top:448px;
-            bottom:0;
-            left:0;
-            bottom:0;
-            color: white;
-            background: black;
-            font-size: 10px;
-            padding:0;
-            margin:0;
-            resize: none;
-        }
+        width:100%;
+        height:96%;
 
-        #wrapper > div > #topleft {
-            height: 400px;
-        }
+        color: white;
+        background: black;
+        resize: none;
+        white-space: pre-line
+        font-family: "Courier New", Courier, monospace;
+    }
 
-        #wrapper2 {
-          background: black;
-        }
+    #editor {
+        padding:0;
+        margin:0;
+        border:2;
+        font-size: 10px;
 
-        #editor {
-          height: 100%;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-        }
+        width:100%;
+        height:100%;
 
+        color: white;
+        background: black;
+        resize: none;
+        white-space: pre-line
+        font-family: "Courier New", Courier, monospace;
+    }
 
-        .myul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+    .myul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+        height:100%;
+    }
 
-        .myul > li {
-            float: left;
-        }
+    .myul > li {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        float: left;
+        height:100%;
+    }
 
-        .myelem {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 8px 8px;
-            text-decoration: none;
-        }
+    .myelem {
+        margin: 0;
+        padding: 10px 10px 10px 10px;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
 
-        .mynav {
-            font-size: 95%;
-            padding: 4px;
-        }
+    .mynav {
+        margin: 0;
+        font-size: 95%;
+    }
 
+    .btn {
+        /*padding: 0;*/
+        /*margin: 0;*/
+        color:green;
+        height:100%;
+    }
     </style>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 </head>
 <body>
 
@@ -123,47 +145,32 @@
 
 </header>
 
-<div id="wrapper2">
-    <div class="mynav bg-dark">
+<div id="outer">
+    <div class="mynav bg-dark minirow">
         <ul class="myul">
-            <li>
-            <a class="nav-link myelem" href="#">CryptoMiniSat</a>
-            </li><li>
-            <a class="nav-link myelem" href="https://www.msoos.org/">Blog</a>
-            <!--</li><li>
-            <a class="nav-link myelem" href="https://github.com/msoos/cryptominisat">GitHub</a>-->
-            </li><li>
-            <button type="button" id="save" class="btn btn-primary btn-md myelem" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Copied to clipboard" aria-label="Copy to Clipboard" disabled>
+            <li><a class="nav-link myelem" href="#">CryptoMiniSat</a></li>
+            <li><a class="nav-link myelem" href="https://www.msoos.org/">Blog</a></li>
+            <li><button type="button" id="save" class="btn btn-primary btn-md myelem" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Copied to clipboard" aria-label="Copy to Clipboard" disabled>
                 <i class="fas fa-paste" aria-hidden="true"></i>
-            </button>
-            </li>
+            </button></li>
 
             <li style="float:right;">
-                <span style="display:inline-block; width: 10px;"></span>
+                <span style="width:10px;"></span>
                 <button type="button" id="runbutton" class="btn btn-primary myelem" disabled>
                     <i id="playbut" class="fas fa-play" aria-hidden="true"></i>
                 </button>
             </li>
-            <li style="float:right;" ><div class="myelem" id="result">Loading</div></li>
+            <li style="float:right;">
+                <div class="myelem" id="result">Loading</div>
+            </li>
         </ul>
     </div>
 
-    <div id="wrapper">
-        <div id="top">
-            <div id="topleft"> <div id="editor">p cnf 1 1
-1 0
-</div>
-        </div>
-        </div>
-        <div id="bottom">
-            <pre id="bottomleft">
-            <!--<pre id="output"></pre>-->
-            <textarea class="scrollabletextbox" name="note" id="output" readOnly="true" spellcheck="false">CryptoMiniSat Output
----------------
-</textarea>
-            </pre>
-        </div>
-    </div>
+    <div id="inner"><div id="wrapper">
+        <div id="outputdiv" class="row"><textarea id="editor" spellcheck="false"></textarea></div><div id="outputdiv" class="row"><textarea id="output" readOnly="true" spellcheck="false">CryptoMiniSat Output
+    ---------------
+</textarea></div>
+    </div></div>
 </div>
 
 
@@ -176,7 +183,7 @@
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 <!-- ACE editor -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.1/ace.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.1/ace.js" type="text/javascript" charset="utf-8"></script>-->
 
 
 <!-- Default Statcounter code for cyrptominisat_web
@@ -232,29 +239,28 @@ Analytics"></a></div></noscript>
 
     $().ready(function () {
         // Configure the editor
-        var editor = ace.edit('editor');
-        editor.setTheme('ace/theme/monokai');
-        editor.session.setMode('ace/mode/text');
-        editor.session.setOptions({
-            wrap: true
-        })
-        //editor.blur();
-
-        editor.setPrintMarginColumn(1000);
+//         var editor = ace.edit('editor');
+//         editor.setTheme('ace/theme/monokai');
+//         editor.session.setMode('ace/mode/text');
+//         editor.session.setOptions({
+//             wrap: true
+//         })
+//
+//         editor.setPrintMarginColumn(1000);
         //editor.renderer.adjustWrapLimit(1000);
 
 
         // Load text from the URL hash if it's there
         if (window.location.hash) {
             var hash = window.location.hash.substring(1);
-            editor.setValue(base64dec(hash));
+            $('#editor').val(base64dec(hash));
             $('#save').removeAttr('disabled');
         } else {
             $.ajax({
                 url : "uum8.smt2-stp212.cnf",
                 dataType: "text",
                 success : function (data) {
-                    editor.setValue(data);
+                    $('#editor').val(data);
                     $('#save').removeAttr('disabled');
                 }
             });
@@ -368,7 +374,7 @@ Analytics"></a></div></noscript>
 
             $('#result').text('Running');
 
-            source = ace.edit('editor').getValue();
+            var source = $('#editor').val();
             try {
                 var result = cms_query(source)
                 check_result(result);
