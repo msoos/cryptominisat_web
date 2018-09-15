@@ -1,7 +1,9 @@
+c Click on the PLAY button on the top right corner to solve
+c ---------------------------
 c CryptoMiniSat demo, NOT the full solver
 c This is uum8.smt2-stp212.cnf from SAT Competition 2016
 c It should solve in about 30 seconds
-c You can edit and click the "copy/paste" button and send the link around
+c ---------------------------
 p cnf 1006 3359
 2 -3 -159 -214 -374 0
 -2 374 0
