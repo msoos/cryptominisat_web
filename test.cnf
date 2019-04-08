@@ -1,0 +1,16 @@
+c Click on the PLAY button on the top right corner to solve
+c ---------------------------
+c This is a very simply example CNF.
+c It encodes that:
+c    v1 OR  v2 = True
+c    v1 OR -v2 = True
+c   -v1 OR  v2 = True
+c   -v1 OR -v2 = True
+c
+c  Which cannot be satisfied. The solution should therefore be UNSATISFIABLE
+c ---------------------------
+c
+1 2 0
+1 -2 0
+-1 2 0
+-1 -2 0
