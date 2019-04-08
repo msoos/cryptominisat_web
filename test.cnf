@@ -8,6 +8,7 @@ c   -v1 OR  v2 = True
 c   -v1 OR -v2 = True
 c
 c  Which cannot be satisfied. The solution should therefore be UNSATISFIABLE
+c  Note that this problem is solved with Strongly Connected Component analysis (scc)
 c ---------------------------
 c
 1 2 0
