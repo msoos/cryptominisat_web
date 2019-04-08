@@ -14,24 +14,23 @@ This generates a wasm and js file which then can be used inside the browser.
 #How to update this repository
 
 ```
-git clone https://github.com/msoos/cryptominisat
+git clone https://github.com/msoos/cryptominisat.git
+cd cryptominisat
 git submodule update --init
 
-# get this repository
 cd utils
-git clone git@github.com:msoos/cryptominisat_web.git
+git clone https://github.com/msoos/cryptominisat_web
 cd ..
 
-# build
-mkdir build && cd build
+mkdir build & cd build
+ln -s ../utils/build_scripts/*.sh .
 ./build_emscripten.sh
-cp *.wasm *.js ../utils/emscripten/
+cp *.wasm *.js ../utils/cryptominisat_web
 
-# test
-cd ../utils/emscripten/
-docker run -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
-
-# commit
-git add *.wasm *.js
+cd ../utils/cryptominisat_web
+git add *
 git commit -a
 ```
+
+You also need emscripten installed and the installation SDK has to be put into the script "build_emscripten.sh"
+>>>>>>> Updating the system to the newest version + adding README + smaller demo
