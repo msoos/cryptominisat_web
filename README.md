@@ -33,4 +33,3 @@ git commit -a
 ```
 
 You also need emscripten installed and the installation SDK has to be put into the script "build_emscripten.sh"
->>>>>>> Updating the system to the newest version + adding README + smaller demo
