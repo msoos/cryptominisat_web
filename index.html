@@ -178,27 +178,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- FontAwesome -->
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-<!-- Default Statcounter code for cyrptominisat_web
-http://msoos.github.io/cryptominisat_web/ -->
-<script type="text/javascript">
-var sc_project=11721099;
-var sc_invisible=1;
-var sc_security="7e859659";
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11721099/0/7e859659/1/" alt="Web
-Analytics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
+<script src="cryptominisat5_simple.js" type="text/javascript" charset="utf-8"></script>a
 <script>
     function base64dec(x) {
         try {
@@ -288,10 +269,7 @@ Analytics"></a></div></noscript>
             }, 700);
         })
     })
-</script>
 
-<script src="cryptominisat5_simple.js" type="text/javascript" charset="utf-8"></script>
-<script>
     function scroll() {
         document.getElementById("output").scrollTop = document.getElementById("output").scrollHeight;
     }
@@ -300,25 +278,6 @@ Analytics"></a></div></noscript>
         var height = document.getElementById("output").offsetHeight;
         return (document.getElementById("output").scrollTop+height) >= document.getElementById("output").scrollHeight;
     }
-
-    Module['onRuntimeInitialized'] = function () {
-        $().ready(function () {
-            $('#runbutton').removeAttr("disabled")
-            $('#result').text('Ready');
-        })
-    }
-    Module['print'] = function(text) {
-        var bottom = at_bottom();
-        $('#output').append(text+"\n")
-        if (bottom) {
-            scroll();
-        }
-    };
-    Module['printErr'] = function(text) {
-        $('#output').append("--error-- " + text+"\n")
-        scroll();
-    };
-
 
     must_stop = false;
     running = false;
@@ -371,21 +330,21 @@ Analytics"></a></div></noscript>
             $('#result').text('Running');
 
             var source = $('#editor').val();
+            console.log("BEFORE");
             try {
                 var result = cms_query(source)
                 check_result(result);
+                console.log("hwat?");
             } catch (err) {
                 console.log(result);
                 console.log(err);
+                console.log("here");
                 running = false;
                 must_stop =false;
                 $('#result').text('Error');
             }
         })
     })
-</script>
-
-<script>
     function cms_query(source) {
         $('#output').html("");
         scroll();
